@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI API Key Tester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-icon">🔑</div>
+            <h1>AI API Key Tester</h1>
+            <p class="subtitle">Test your API keys and discover available models</p>
+            <div class="providers-badge">
+                <span>OpenAI</span>
+                <span>Anthropic</span>
+                <span>OpenRouter</span>
+                <span>Groq</span>
+                <span>DeepSeek</span>
+                <span>Together AI</span>
+                <span>Mistral</span>
+                <span>Perplexity</span>
+                <span>Cohere</span>
+                <span>FreeModel</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="card input-card">
+                <form id="testForm">
+                    <div class="form-group">
+                        <label for="apiKey">API Key</label>
+                        <textarea 
+                            id="apiKey" 
+                            name="apiKey" 
+                            rows="3" 
+                            placeholder="sk-... or sk-ant-... or sk-or-v1-..."
+                            required
+                        ></textarea>
+                        <small>Provider auto-detected. Keys are never stored.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customUrl">Custom Base URL <span class="optional">(Optional)</span></label>
+                        <input 
+                            type="text" 
+                            id="customUrl" 
+                            name="customUrl" 
+                            placeholder="https://api.example.com/v1"
+                        />
+                        <small>For custom endpoints like FreeModel or CCode.dev</small>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="testBtn">
+                        <span class="btn-text">Test API Key</span>
+                        <span class="btn-loader" style="display: none;">
+                            <span class="spinner"></span>
+                            Testing...
+                        </span>
+                    </button>
+                </form>
+            </div>
+
+            <div id="results" style="display: none;">
+                <div class="card provider-card">
+                    <h2>Provider Information</h2>
+                    <div id="providerInfo"></div>
+                </div>
+
+                <div class="card models-card">
+                    <h2>Models & Latency</h2>
+                    <div id="modelsInfo"></div>
+                    <div id="modelsList"></div>
+                    <div id="pagination" style="display: none;">
+                        <button id="prevPage" class="btn-pagination">← Previous</button>
+                        <span id="pageInfo"></span>
+                        <button id="nextPage" class="btn-pagination">Next →</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="card error-card" style="display: none;">
+                <h3>Error</h3>
+                <div id="errorMessage"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built for AI developers • Keys never stored • Open source</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

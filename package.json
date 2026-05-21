@@ -1,0 +1,27 @@
+{
+  "name": "ai-api-key-tester",
+  "version": "1.0.0",
+  "description": "Test AI API keys and discover available models with minimalist Apple design",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "ai",
+    "api",
+    "key",
+    "tester",
+    "openai",
+    "anthropic",
+    "openrouter",
+    "groq",
+    "deepseek"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
