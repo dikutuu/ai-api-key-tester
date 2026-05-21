@@ -71,7 +71,7 @@ function detectProvider(apiKey) {
         return 'groq';
     } else if (apiKey.startsWith('fe_oa_')) {
         return 'freemodel';
-    } else if (apiKey.startsWith('mimo_') || apiKey.startsWith('sk-mimo-')) {
+    } else if (apiKey.startsWith('mimo_') || apiKey.startsWith('sk-mimo-') || apiKey.startsWith('tp-sk')) {
         return 'mimo';
     } else if (apiKey.startsWith('sk-proj-')) {
         return 'openai';
