@@ -1,6 +1,7 @@
 {
   "name": "ai-api-key-tester",
   "version": "1.0.0",
+  "type": "module",
   "description": "Test AI API keys and discover available models with minimalist Apple design",
   "main": "index.html",
   "scripts": {
