@@ -23,6 +23,7 @@ Test your AI API keys and discover available models with a minimalist Apple-insp
 - Perplexity
 - Cohere
 - FreeModel
+- MiMo (Xiaomi)
 
 ## Usage
 
