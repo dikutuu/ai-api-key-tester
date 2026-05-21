@@ -71,6 +71,8 @@ function detectProvider(apiKey) {
         return 'groq';
     } else if (apiKey.startsWith('fe_oa_')) {
         return 'freemodel';
+    } else if (apiKey.startsWith('mimo_') || apiKey.startsWith('sk-mimo-')) {
+        return 'mimo';
     } else if (apiKey.startsWith('sk-proj-')) {
         return 'openai';
     } else if (apiKey.startsWith('sk-')) {
@@ -99,7 +101,8 @@ function getDefaultBaseUrl(provider) {
         'mistral': 'https://api.mistral.ai/v1',
         'perplexity': 'https://api.perplexity.ai',
         'cohere': 'https://api.cohere.ai/v1',
-        'freemodel': 'https://cc.freemodel.dev/v1'
+        'freemodel': 'https://cc.freemodel.dev/v1',
+        'mimo': 'https://api.mimo.ai/v1'
     };
 
     return urls[provider] || urls['openai'];
